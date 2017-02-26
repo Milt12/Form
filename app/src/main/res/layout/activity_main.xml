@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#ffffff"
+    android:id="@+id/dl"
+    tools:context="com.example.milt.form.MainActivity">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+   <include layout="@layout/toolbar"
+       android:id="@+id/mytoolbar"/>
+
+
+
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mytoolbar"
+        android:id="@+id/gridLayout">
+
+        <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:id="@+id/textView1"
+             />
+            <EditText
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText1"
+
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                />
+        </TableRow>
+<TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fathers Name"
+            android:id="@+id/textView2"
+            />
+    <EditText
+        android:layout_width="270dp"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:imeOptions="actionNext"
+
+
+        /></TableRow>
+
+        <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roll No."
+            android:id="@+id/textView4"
+            />
+            <EditText
+                android:layout_width="177dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText4"
+                android:imeOptions="actionNext"
+                android:phoneNumber="false" /></TableRow>
+
+        <TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Branch"
+            android:id="@+id/textView5"
+            android:layout_row="3"
+            android:layout_column="0" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_row="3"
+            android:imeOptions="actionNext"
+            android:layout_column="1"
+            android:spinnerMode="dropdown" />
+
+        </TableRow>
+
+
+
+<TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sex"
+            android:id="@+id/textView" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1"
+        android:id="@+id/linearLayout">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:id="@+id/rb1"
+            android:layout_weight="0.35"
+            android:imeOptions="actionNext"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:imeOptions="actionNext"
+            android:id="@+id/rb2"
+            android:checked="false" />
+
+    </LinearLayout>
+</TableRow>
+
+
+
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:id="@+id/textView3"
+                android:layout_column="0" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:layout_column="1"
+
+                android:imeOptions="actionNext"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText2"
+                android:layout_column="1"
+                android:imeOptions="actionNext"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:id="@+id/textView6"
+                android:layout_column="0" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText5"
+                android:layout_column="1"
+                android:imeOptions="actionNext"/>
+
+        </TableRow>
+
+
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button"
+        android:layout_below="@+id/tableLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        android:id="@+id/button2"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+    </TableLayout>
+</LinearLayout>
+
+
+       <android.support.design.widget.NavigationView
+
+           android:layout_gravity="start"
+           android:id="@+id/navigation_view"
+           app:headerLayout="@layout/header"
+           app:menu="@menu/items"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"></android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>
